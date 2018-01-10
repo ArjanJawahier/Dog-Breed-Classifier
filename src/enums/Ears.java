@@ -1,16 +1,16 @@
 package enums;
 
 public enum Ears {
-    ERECT           ("erect"),
-    FLOPPY          ("floppy"),
-    BAT             ("bat"),
-    ROSE            ("rose"),
-    SEMI_PRICKED    ("semi-pricked"),
-    BUTTON          ("button"),
-    BUTTERFLY       ("butterfly"),
-    CANDLE_FLAME    ("candle-flame"),
-    FILBERT         ("filbert"),
-    FOLDED          ("folded"),
+    BAT             ("Bat"),
+    BUTTERFLY       ("Butterfly"), //Too niche
+    BUTTON          ("Button"),
+    CANDLE_FLAME    ("Candle-flame"), //Too niche
+    ERECT           ("Erect"),
+    FILBERT         ("Filbert"), //Too niche, only 1 dog breed has this
+    FLOPPY          ("Floppy"),
+    FOLDED          ("Folded"),
+    ROSE            ("Rose"),
+    SEMI_PRICKED    ("Semi-pricked"),
     IDK             ("I don't know");
 
     private final String string;

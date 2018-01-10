@@ -1,9 +1,9 @@
 package enums;
 
 public enum Feet {
-    CAT     ("cat"),
-    HARE    ("hare"),
-    WEBBED  ("webbed"),
+    CAT     ("Cat (Most Common)"),
+    HARE    ("Hare"),
+    WEBBED  ("Webbed"),
     IDK     ("I don't know");
 
     private final String string;

@@ -1,15 +1,16 @@
 package enums;
 
 public enum Coat {
-    FLAT            ("flat"),
-    SHORT           ("short"),
-    COMBINATION     ("short and long (combination)"),
-    DOUBLE          ("double"),
-    HEAVY           ("heavy"),
-    SILKY           ("silky"),
-    CURLY           ("curly"),
-    WIRE            ("wire"),
-    LONG            ("long"),
+    CURLY           ("Curly"),
+    DENSE           ("Dense"),
+    DOUBLE          ("Double"),
+    FLAT            ("Flat"), // Feels unnecessary
+    LONG            ("Long"),
+    SILKY           ("Silky"),
+    SHORT           ("Short"),
+    SHORT_SMOOTH    ("Short & Smooth"),
+    SHORT_LONG      ("Double (Short and Long)"),
+    WIRE            ("Wire"),
     IDK             ("I don't know");
 
     private final String string;

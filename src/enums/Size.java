@@ -1,9 +1,9 @@
 package enums;
 
 public enum Size {
-    SMALL   ("small"),
-    MEDIUM  ("medium"),
-    LARGE   ("large"),
+    SMALL   ("Small (Example: Pug)"),
+    MEDIUM  ("Medium (Example: Beagle)"),
+    LARGE   ("Large (Example: German Shepherd)"),
     IDK     ("I don't know");
 
     private final String string;
