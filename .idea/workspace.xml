@@ -1,7 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ca326cc-abf8-4154-b7f6-008e2a65b52b" name="Default" comment="" />
+    <list default="true" id="9ca326cc-abf8-4154-b7f6-008e2a65b52b" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/Dogbreeds.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/out/production/Assignment2Problem4SNS/Main.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/out/production/Assignment2Problem4SNS/Solver.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/out/production/Dogbreeds/AnswerVertex.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/out/production/Dogbreeds/DogFrame.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/out/production/Dogbreeds/DogModel$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/out/production/Dogbreeds/DogModel.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/out/production/Dogbreeds/DogPanel.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/out/production/Dogbreeds/InfoBlock.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/out/production/Dogbreeds/Main.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/out/production/Dogbreeds/ResultVertex.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/out/production/Dogbreeds/SelectionManager.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/out/production/Dogbreeds/Vertex.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/out/production/Dogbreeds/enums/Coat.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/out/production/Dogbreeds/enums/Dogbreed.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/out/production/Dogbreeds/enums/Ears.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/out/production/Dogbreeds/enums/Feet.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/out/production/Dogbreeds/enums/Question.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/out/production/Dogbreeds/enums/Size.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/out/production/Dogbreeds/enums/Tail.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/src/AnswerVertex.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/src/DogFrame.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/src/DogModel.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/src/DogPanel.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/src/InfoBlock.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/src/Main.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/src/ResultVertex.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/src/SelectionManager.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/src/Vertex.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/src/enums/Coat.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/src/enums/Dogbreed.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/src/enums/Ears.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/src/enums/Feet.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/src/enums/Question.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/src/enums/Size.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Dogbreeds/src/enums/Tail.java" afterPath="" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -94,7 +133,7 @@
       <file leaf-file-name="SelectionManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SelectionManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1224">
+            <state relative-caret-position="918">
               <caret line="72" column="44" lean-forward="true" selection-start-line="72" selection-start-column="44" selection-end-line="72" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -217,6 +256,9 @@
       <find>print</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -254,11 +296,12 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="960" />
     <option name="width" value="960" />
     <option name="height" value="1040" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -439,7 +482,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -451,7 +494,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33404028" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1267,7 +1310,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SelectionManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
+        <state relative-caret-position="918">
           <caret line="72" column="44" lean-forward="true" selection-start-line="72" selection-start-column="44" selection-end-line="72" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
