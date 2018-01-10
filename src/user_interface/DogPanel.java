@@ -1,8 +1,9 @@
-import enums.Dogbreed;
+package user_interface;
+
+import procedural_model.DogModel;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.Map;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -20,6 +21,7 @@ public class DogPanel extends JPanel implements Observer {
 
     public void paintComponent(Graphics graphics){
         super.paintComponent(graphics);
+        graphics.setFont(new Font("default", Font.BOLD, 12));
         paintQuestion(graphics);
         paintAnswerVertices(graphics);
         paintResetButton(graphics);
@@ -121,7 +123,7 @@ public class DogPanel extends JPanel implements Observer {
             String verdict = this.dogModel.getInfoBlock().getReasoningUnit().getVerdict();
             drawNewlineString(graphics, realValues, ib.getX() + 20, ib.getY() + 15);
             drawNewlineString(graphics, description, ib.getX() + ib.getWidth()/2, ib.getY() + 15);
-            graphics.drawString(verdict, ib.getX() + 20, ib.getY() + graphics.getFontMetrics().getHeight()*10);
+            drawNewlineString(graphics, verdict, ib.getX() + 20, ib.getY() + graphics.getFontMetrics().getHeight()*10);
         }
     }
 
@@ -133,7 +135,7 @@ public class DogPanel extends JPanel implements Observer {
     private void paintExitButton(Graphics graphics){
         if(dogModel.getExitButton() != null){
             ExitButton eb = dogModel.getExitButton();
-            graphics.setColor(Color.RED);
+            graphics.setColor(Color.MAGENTA);
             graphics.fillRect(eb.getX(), eb.getY(), eb.getWidth(), eb.getHeight());
             graphics.setColor(Color.ORANGE);
             graphics.fillRect(eb.getX() + 10, eb.getY() + 10, eb.getWidth() - 20, eb.getHeight() - 20);

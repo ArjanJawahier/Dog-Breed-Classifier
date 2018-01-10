@@ -1,4 +1,4 @@
-package enums;
+package declarative_knowledge;
 
 public enum Feet {
     CAT     ("Cat (Most Common)"),

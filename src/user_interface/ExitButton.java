@@ -1,3 +1,4 @@
+package user_interface;
 
 public class ExitButton extends Vertex {
 

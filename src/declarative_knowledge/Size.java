@@ -1,4 +1,4 @@
-package enums;
+package declarative_knowledge;
 
 public enum Size {
     SMALL   ("Small (Example: Pug)"),

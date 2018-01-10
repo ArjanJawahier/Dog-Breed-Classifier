@@ -1,4 +1,7 @@
-import enums.*;
+package procedural_model;
+
+import declarative_knowledge.*;
+import user_interface.*;
 
 import java.util.*;
 
