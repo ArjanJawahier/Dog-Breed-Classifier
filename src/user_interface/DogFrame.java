@@ -1,3 +1,5 @@
+package user_interface;
+
 import javax.swing.*;
 
 public class DogFrame extends JFrame{

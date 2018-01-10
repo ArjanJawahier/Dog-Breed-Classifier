@@ -1,4 +1,4 @@
-package enums;
+package declarative_knowledge;
 
 public enum Dogbreed {
     BEAGLE              ("Beagle", Size.MEDIUM, Ears.FOLDED, Tail.WHIP, Coat.SHORT, Feet.CAT),

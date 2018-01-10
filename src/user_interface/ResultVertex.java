@@ -1,6 +1,8 @@
+package user_interface;
+
 import java.awt.*;
 
-public class ResultVertex extends Vertex{
+public class ResultVertex extends Vertex {
 
     private boolean possible;
 

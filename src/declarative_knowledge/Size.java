@@ -1,14 +1,14 @@
-package enums;
+package declarative_knowledge;
 
-public enum Feet {
-    CAT     ("cat"),
-    HARE    ("hare"),
-    WEBBED  ("webbed"),
+public enum Size {
+    SMALL   ("small"),
+    MEDIUM  ("medium"),
+    LARGE   ("large"),
     IDK     ("I don't know");
 
     private final String string;
 
-    Feet(String string){
+    Size(String string){
         this.string = string;
     }
 

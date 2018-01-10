@@ -1,4 +1,6 @@
-import enums.Question;
+import declarative_knowledge.Question;
+import procedural_model.DogModel;
+import user_interface.*;
 
 import javax.swing.event.MouseInputAdapter;
 import java.awt.event.MouseEvent;

@@ -1,4 +1,7 @@
-import enums.Question;
+package user_interface;
+
+import declarative_knowledge.Question;
+import procedural_model.ReasoningUnit;
 
 import java.util.Map;
 
