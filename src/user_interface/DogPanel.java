@@ -2,14 +2,19 @@ package user_interface;
 
 import procedural_model.DogModel;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.Observable;
 import java.util.Observer;
 
 public class DogPanel extends JPanel implements Observer {
     private DogModel dogModel;
     private JLabel questionLabel;
+    private BufferedImage shownImage;
 
     public DogPanel(DogModel graphModel, JLabel questionLabel){
         super();
@@ -25,6 +30,7 @@ public class DogPanel extends JPanel implements Observer {
         paintQuestion(graphics);
         paintAnswerVertices(graphics);
         paintResetButton(graphics);
+        paintShownImage(graphics);
         paintPreviousQuestionButton(graphics);
         paintResults(graphics);
         paintInfoBlock(graphics);
@@ -68,6 +74,12 @@ public class DogPanel extends JPanel implements Observer {
             drawCenteredName(button, graphics);
             graphics.setColor(Color.BLACK);
             graphics.drawRect(button.getX(), button.getY(), button.getWidth(), button.getHeight());
+        }
+    }
+
+    private void paintShownImage(Graphics graphics){
+        if(shownImage != null){
+            graphics.drawImage(shownImage, 15, 500, shownImage.getWidth(), shownImage.getHeight(), null);
         }
     }
 
@@ -145,5 +157,23 @@ public class DogPanel extends JPanel implements Observer {
 
     public void update(Observable observed, Object message) {
         repaint();
+    }
+
+    public void setShownImage(String fileLocation){
+        System.out.println(fileLocation);
+        File image = new File(fileLocation);
+        BufferedImage buffImg = new BufferedImage(240, 240, BufferedImage.TYPE_INT_ARGB);
+        try {
+            buffImg = ImageIO.read(image);
+            System.out.println(image);
+        }
+        catch (IOException e) {
+            System.out.println(e);
+        }
+        this.shownImage = buffImg;
+    }
+
+    public void deleteShownImage(){
+        this.shownImage = null;
     }
 }

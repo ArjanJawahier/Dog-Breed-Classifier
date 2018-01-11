@@ -3,6 +3,7 @@ package procedural_model;
 import declarative_knowledge.*;
 import user_interface.*;
 
+import java.awt.image.BufferedImage;
 import java.util.*;
 
 public class DogModel extends Observable {
@@ -206,4 +207,5 @@ public class DogModel extends Observable {
     public void setResetButton(ResetButton resetButton) {
         this.resetButton = resetButton;
     }
+
 }

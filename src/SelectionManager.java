@@ -16,14 +16,23 @@ public class SelectionManager extends MouseInputAdapter {
         panel.addMouseMotionListener(this);
     }
 
-    private boolean clickedOnVertex(MouseEvent event, Vertex vertex) {
+    private boolean cursorOnVertex(MouseEvent event, Vertex vertex) {
         return event.getX() >= vertex.getX()
                 && event.getX() <= vertex.getX() + vertex.getWidth()
                 && event.getY() >= vertex.getY()
                 && event.getY() <= vertex.getY() + vertex.getHeight();
     }
 
+
     public void mouseMoved(MouseEvent event){
+        for(AnswerVertex answerVertex : model.getAnswerVertices()) {
+            if (cursorOnVertex(event, answerVertex)) {
+                panel.setShownImage("images/" +  answerVertex.getName() + ".png");
+                break;
+            }
+            panel.deleteShownImage();
+        }
+        panel.update(model, null);
 
     }
 
@@ -33,7 +42,7 @@ public class SelectionManager extends MouseInputAdapter {
 
     public void mouseReleased(MouseEvent event){
         for(AnswerVertex answerVertex : model.getAnswerVertices()){
-            if(clickedOnVertex(event, answerVertex)){
+            if(cursorOnVertex(event, answerVertex)){
                 model.addAnswer(answerVertex.getName());
                 model.nextQuestion();
                 break;
@@ -41,34 +50,34 @@ public class SelectionManager extends MouseInputAdapter {
         }
 
         for(ResultVertex resultVertex : model.getPossible()){
-            if(clickedOnVertex(event, resultVertex)){
+            if(cursorOnVertex(event, resultVertex)){
                 model.addInfo(resultVertex);
                 break;
             }
         }
 
         for(ResultVertex resultVertex : model.getImpossible()){
-            if(clickedOnVertex(event, resultVertex)){
+            if(cursorOnVertex(event, resultVertex)){
                 model.addInfo(resultVertex);
                 break;
             }
         }
 
         if(model.getExitButton() != null){
-            if(clickedOnVertex(event, model.getExitButton())){
+            if(cursorOnVertex(event, model.getExitButton())){
                 model.setInfoBlock(null);
                 model.setExitButton(null);
             }
         }
 
         if(model.getPreviousQuestionButton() != null){
-            if(clickedOnVertex(event, model.getPreviousQuestionButton())){
+            if(cursorOnVertex(event, model.getPreviousQuestionButton())){
                 model.previousQuestion();
             }
         }
 
         if(model.getResetButton() != null){
-            if(clickedOnVertex(event, model.getResetButton())){
+            if(cursorOnVertex(event, model.getResetButton())){
                 model.setQuestion(Question.ONE);
                 model.setPreviousQuestionButton(null);
                 model.replaceAnswerVertices();
