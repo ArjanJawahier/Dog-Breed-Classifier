@@ -27,7 +27,7 @@ public class SelectionManager extends MouseInputAdapter {
     public void mouseMoved(MouseEvent event){
         for(AnswerVertex answerVertex : model.getAnswerVertices()) {
             if (cursorOnVertex(event, answerVertex)) {
-                panel.setShownImage("images/" +  answerVertex.getName() + ".png");
+                panel.setShownImage("/images/" +  answerVertex.getName() + ".png");
                 break;
             }
             panel.deleteShownImage();

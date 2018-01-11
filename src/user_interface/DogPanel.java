@@ -2,6 +2,7 @@ package user_interface;
 
 import procedural_model.DogModel;
 
+import javax.annotation.Resource;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -161,14 +162,12 @@ public class DogPanel extends JPanel implements Observer {
 
     public void setShownImage(String fileLocation){
         System.out.println(fileLocation);
-        File image = new File(fileLocation);
         BufferedImage buffImg = new BufferedImage(240, 240, BufferedImage.TYPE_INT_ARGB);
         try {
-            buffImg = ImageIO.read(image);
-            System.out.println(image);
+            buffImg = ImageIO.read(DogPanel.class.getResource(fileLocation));
         }
-        catch (IOException e) {
-            System.out.println(e);
+        catch (Exception e) {
+            System.out.println("image not found: " + fileLocation);
         }
         this.shownImage = buffImg;
     }
