@@ -43,7 +43,6 @@ public class DogPanel extends JPanel implements Observer {
             graphics.drawRect(vertex.getX(), vertex.getY(), vertex.getWidth(), vertex.getHeight());
             drawCenteredName(vertex, graphics);
         }
-
     }
 
     private void drawCenteredName(Vertex vertex, Graphics graphics){
