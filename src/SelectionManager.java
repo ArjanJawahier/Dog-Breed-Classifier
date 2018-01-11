@@ -25,13 +25,39 @@ public class SelectionManager extends MouseInputAdapter {
 
 
     public void mouseMoved(MouseEvent event){
-        for(AnswerVertex answerVertex : model.getAnswerVertices()) {
-            if (cursorOnVertex(event, answerVertex)) {
-                panel.setShownImage("/images/" +  answerVertex.getName() + ".png");
+        for(Vertex vertex : model.getAnswerVertices()) {
+            if (cursorOnVertex(event, vertex)) {
+                panel.setShownImage("/images/" +  vertex.getName() + ".png");
                 break;
             }
-            panel.deleteShownImage();
+            if(model.getAnswerVertices().size() != 0){
+                panel.deleteShownImage();
+            }
         }
+
+        if(model.getInfoBlock() == null) {
+            for (Vertex vertex : model.getPossible()) {
+                if (cursorOnVertex(event, vertex)) {
+                    panel.setShownImage("/images/" + vertex.getName() + ".png" );
+                    break;
+                }
+                if(event.getX() < 400){
+                    panel.deleteShownImage();
+                }
+            }
+
+            for (Vertex vertex : model.getImpossible()) {
+                if (cursorOnVertex(event, vertex)) {
+                    panel.setShownImage("/images/" + vertex.getName() + ".png" );
+                    break;
+                }
+                if(event.getX() > 400){
+                    panel.deleteShownImage();
+                }
+            }
+
+        }
+
         panel.update(model, null);
 
     }
@@ -41,27 +67,35 @@ public class SelectionManager extends MouseInputAdapter {
     }
 
     public void mouseReleased(MouseEvent event){
-        for(AnswerVertex answerVertex : model.getAnswerVertices()){
-            if(cursorOnVertex(event, answerVertex)){
-                model.addAnswer(answerVertex.getName());
-                model.nextQuestion();
-                break;
+        if(model.getInfoBlock() == null){
+
+            panel.deleteShownImage();
+
+            for(AnswerVertex answerVertex : model.getAnswerVertices()){
+                if(cursorOnVertex(event, answerVertex)){
+                    model.addAnswer(answerVertex.getName());
+                    model.nextQuestion();
+                    break;
+                }
+            }
+
+            for(ResultVertex resultVertex : model.getPossible()){
+                if(cursorOnVertex(event, resultVertex)){
+                    model.addInfo(resultVertex);
+                    panel.setShownImage("/images/" + resultVertex.getName() + ".png" );
+                    break;
+                }
+            }
+
+            for(ResultVertex resultVertex : model.getImpossible()){
+                if(cursorOnVertex(event, resultVertex)){
+                    model.addInfo(resultVertex);
+                    panel.setShownImage("/images/" + resultVertex.getName() + ".png" );
+                    break;
+                }
             }
         }
 
-        for(ResultVertex resultVertex : model.getPossible()){
-            if(cursorOnVertex(event, resultVertex)){
-                model.addInfo(resultVertex);
-                break;
-            }
-        }
-
-        for(ResultVertex resultVertex : model.getImpossible()){
-            if(cursorOnVertex(event, resultVertex)){
-                model.addInfo(resultVertex);
-                break;
-            }
-        }
 
         if(model.getExitButton() != null){
             if(cursorOnVertex(event, model.getExitButton())){
@@ -85,8 +119,10 @@ public class SelectionManager extends MouseInputAdapter {
                 model.getImpossible().clear();
                 model.setExitButton(null);
                 model.setInfoBlock(null);
-                panel.update(model, null);
+                model.setResultBox(null);
             }
         }
+
+        panel.update(model, null);
     }
 }

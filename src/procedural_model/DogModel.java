@@ -3,7 +3,7 @@ package procedural_model;
 import declarative_knowledge.*;
 import user_interface.*;
 
-import java.awt.image.BufferedImage;
+import java.awt.*;
 import java.util.*;
 
 public class DogModel extends Observable {
@@ -20,6 +20,7 @@ public class DogModel extends Observable {
     private PreviousQuestionButton previousQuestionButton;
     private InfoBlock infoBlock;
     private ExitButton exitButton;
+    private Vertex resultBox;
 
     public DogModel() {
         setResetButton(new ResetButton());
@@ -30,31 +31,73 @@ public class DogModel extends Observable {
     public void inferByExclusion(){
         int xPossible = 20;
         int xImpossible = 530;
-        int yPossible = 20;
-        int yImpossible = 20;
+        int yPossible = 25;
+        int yImpossible = 25;
+        int ySpacing = 25;
         for(Dogbreed dogbreed : Dogbreed.values()){
             if(!questionAnswerPairs.get(Question.ONE).equals(Size.IDK.getString()) && !dogbreed.size().getString().equals(questionAnswerPairs.get(Question.ONE))){
                 impossible.add(new ResultVertex(xImpossible, yImpossible, dogbreed.getName(), false));
-                yImpossible += 40;
+                yImpossible += ySpacing;
             } else if(!questionAnswerPairs.get(Question.TWO).equals(Ears.IDK.getString()) && !dogbreed.ears().getString().equals(questionAnswerPairs.get(Question.TWO))){
                 impossible.add(new ResultVertex(xImpossible, yImpossible, dogbreed.getName(), false));
-                yImpossible += 40;
+                yImpossible += ySpacing;
             } else if(!questionAnswerPairs.get(Question.THREE).equals(Tail.IDK.getString()) && !dogbreed.tail().getString().equals(questionAnswerPairs.get(Question.THREE))){
                 impossible.add(new ResultVertex(xImpossible, yImpossible, dogbreed.getName(), false));
-                yImpossible += 40;
+                yImpossible += ySpacing;
             } else if(!questionAnswerPairs.get(Question.FOUR).equals(Coat.IDK.getString()) && !dogbreed.coat().getString().equals(questionAnswerPairs.get(Question.FOUR))){
                 impossible.add(new ResultVertex(xImpossible, yImpossible, dogbreed.getName(), false));
-                yImpossible += 40;
+                yImpossible += ySpacing;
             } else if(!questionAnswerPairs.get(Question.FIVE).equals(Feet.IDK.getString()) && !dogbreed.feet().getString().equals(questionAnswerPairs.get(Question.FIVE))){
                 impossible.add(new ResultVertex(xImpossible, yImpossible, dogbreed.getName(), false));
-                yImpossible += 40;
+                yImpossible += ySpacing;
             } else {
                 possible.add(new ResultVertex(xPossible, yPossible, dogbreed.getName(), true));
-                yPossible += 40;
+                yPossible += ySpacing;
             }
         }
+        String resultText = makeResultText();
+        setResultBox(new Vertex(300, 150, 200, 400, resultText, Color.YELLOW));
     }
 
+    private String makeResultText(){
+        String text;
+        if (possible.size() == 0) {
+            text = "It looks like there is no dog in\n" +
+                    "our database that fits your\n" +
+                    "description. We're sorry!\n" +
+                    "Press the \"Start over\"\n" +
+                    "button at the bottom of the page\n" +
+                    "to try again. You can click on any \n" +
+                    "of the dog breeds to the right to\n" +
+                    "find out why they do not \n" +
+                    "fit your description.";
+        } else if (possible.size() == 1) {
+            text = "It looks like there is 1 dog in\n" +
+                    "our database that fits your\n" +
+                    "description. You can check out\n" +
+                    "the dog by clicking its name\n" +
+                    "to the left. Press the\n" +
+                    "\"Start over\" button at the\n" +
+                    " bottom of the page to try again.\n" +
+                    "You can click on any of the dog\n" +
+                    " breeds to the right to find out\n" +
+                    " why they do not fit your\n" +
+                    "description.";
+        } else {
+            text = "It looks like there are multiple\n" +
+                    " dogs in our database that fit\n" +
+                    " your description. You can check\n" +
+                    " out the dogs by clicking on\n" +
+                    " their names to the left.\n" +
+                    "Press the \"Start over\" button\n" +
+                    " at the bottom of the page to\n" +
+                    " try again. You can click on any\n" +
+                    " of the dog breeds to the right\n" +
+                    " to find out why they do not \n" +
+                    "fit your description.";
+        }
+        return text;
+    }
 
     public Question getQuestion() {
         return question;
@@ -208,4 +251,11 @@ public class DogModel extends Observable {
         this.resetButton = resetButton;
     }
 
+    public Vertex getResultBox() {
+        return resultBox;
+    }
+
+    public void setResultBox(Vertex resultBox) {
+        this.resultBox = resultBox;
+    }
 }

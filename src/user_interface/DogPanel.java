@@ -2,13 +2,10 @@ package user_interface;
 
 import procedural_model.DogModel;
 
-import javax.annotation.Resource;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -31,11 +28,11 @@ public class DogPanel extends JPanel implements Observer {
         paintQuestion(graphics);
         paintAnswerVertices(graphics);
         paintResetButton(graphics);
-        paintShownImage(graphics);
         paintPreviousQuestionButton(graphics);
         paintResults(graphics);
         paintInfoBlock(graphics);
         paintExitButton(graphics);
+        paintShownImage(graphics);
     }
 
     private void paintQuestion(Graphics graphics){
@@ -80,7 +77,8 @@ public class DogPanel extends JPanel implements Observer {
 
     private void paintShownImage(Graphics graphics){
         if(shownImage != null){
-            graphics.drawImage(shownImage, 15, 500, shownImage.getWidth(), shownImage.getHeight(), null);
+            int x = 400 - shownImage.getWidth()/2;
+            graphics.drawImage(shownImage, x, 630, shownImage.getWidth(), shownImage.getHeight(), null);
         }
     }
 
@@ -99,6 +97,7 @@ public class DogPanel extends JPanel implements Observer {
     private void paintResults(Graphics graphics){
         paintPossibleDogs(graphics);
         paintImpossibleDogs(graphics);
+        paintResultBox(graphics);
     }
 
     private void paintPossibleDogs(Graphics graphics){
@@ -118,6 +117,19 @@ public class DogPanel extends JPanel implements Observer {
             graphics.setColor(Color.BLACK);
             graphics.drawRect(vertex.getX(), vertex.getY(), vertex.getWidth(), vertex.getHeight());
             drawCenteredName(vertex, graphics);
+        }
+    }
+
+    private void paintResultBox(Graphics graphics){
+        if(dogModel.getResultBox() != null){
+            Vertex box = dogModel.getResultBox();
+            graphics.setColor(box.getBackgroundColor());
+            graphics.fillRect(box.getX(), box.getY(), box.getWidth(), box.getHeight());
+            graphics.setColor(Color.BLACK);
+            for(int i = 0; i < 5; i++){
+                graphics.drawRect(box.getX() + i, box.getY() + i, box.getWidth() - 2*i, box.getHeight() - 2*i);
+            }
+            drawNewlineString(graphics, box.getName(), box.getX() + 10, box.getY() + 10);
         }
     }
 
@@ -161,7 +173,6 @@ public class DogPanel extends JPanel implements Observer {
     }
 
     public void setShownImage(String fileLocation){
-        System.out.println(fileLocation);
         BufferedImage buffImg = new BufferedImage(240, 240, BufferedImage.TYPE_INT_ARGB);
         try {
             buffImg = ImageIO.read(DogPanel.class.getResource(fileLocation));
