@@ -1,9 +1,9 @@
 package declarative_knowledge;
 
 public enum Size {
-    SMALL   ("Small (Example: Pug)"),
-    MEDIUM  ("Medium (Example: Beagle)"),
-    LARGE   ("Large (Example: German Shepherd)"),
+    SMALL   ("Small"),
+    MEDIUM  ("Medium"),
+    LARGE   ("Large"),
     IDK     ("I don't know");
 
     private final String string;
