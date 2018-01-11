@@ -26,7 +26,7 @@ public class DogModel extends Observable {
         replaceAnswerVertices();
     }
 
-    public void solve(){
+    public void inferByExclusion(){
         int xPossible = 20;
         int xImpossible = 530;
         int yPossible = 20;
@@ -93,7 +93,7 @@ public class DogModel extends Observable {
             answerVertices.clear();
             setQuestion(Question.EMPTY);
             setPreviousQuestionButton(null);
-            solve();
+            inferByExclusion();
         } else {
             setQuestion(Question.values()[++i]);
             setPreviousQuestionButton(new PreviousQuestionButton());
