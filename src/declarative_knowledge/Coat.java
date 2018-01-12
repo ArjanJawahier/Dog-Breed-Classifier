@@ -7,7 +7,7 @@ public enum Coat {
     LONG            ("Long"),
     SILKY           ("Silky"),
     SHORT           ("Short"),
-    SHORT_SMOOTH    ("Short & Smooth"),
+    //SHORT_SMOOTH    ("Short & Smooth"),
     SHORT_LONG      ("Double (Short and Long)"),
     WIRE            ("Wire"),
     IDK             ("I don't know");

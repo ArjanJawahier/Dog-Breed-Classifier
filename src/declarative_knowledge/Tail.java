@@ -2,9 +2,9 @@ package declarative_knowledge;
 
 public enum Tail {
     BOBBED          ("Bobbed"),
+    CURLED          ("Curled"),
     DOCKED          ("Docked"),
-    OTTER_SABER     ("Otter"),
-    RING            ("Ring"),
+    OTTER           ("Otter"),
     SCREW           ("Screw"),
     SICKLE          ("Sickle"),
     STRAIGHT        ("Straight"),
