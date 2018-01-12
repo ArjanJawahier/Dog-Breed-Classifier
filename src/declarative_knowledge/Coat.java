@@ -3,7 +3,6 @@ package declarative_knowledge;
 public enum Coat {
     CURLY           ("Curly"),
     DENSE           ("Dense"),
-    DOUBLE          ("Double"),
     FLAT            ("Flat"), // Feels unnecessary
     LONG            ("Long"),
     SILKY           ("Silky"),

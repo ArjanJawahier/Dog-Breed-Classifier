@@ -3,7 +3,7 @@ package declarative_knowledge;
 public enum Tail {
     BOBBED          ("Bobbed"),
     DOCKED          ("Docked"),
-    OTTER_SABER     ("Otter/Saber"),
+    OTTER_SABER     ("Otter"),
     RING            ("Ring"),
     SCREW           ("Screw"),
     SICKLE          ("Sickle"),
