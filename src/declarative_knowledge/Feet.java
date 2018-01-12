@@ -1,7 +1,7 @@
 package declarative_knowledge;
 
 public enum Feet {
-    CAT     ("Cat (Most Common)"),
+    CAT     ("Cat"),
     HARE    ("Hare"),
     WEBBED  ("Webbed"),
     IDK     ("I don't know");
