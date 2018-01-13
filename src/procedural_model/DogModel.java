@@ -31,9 +31,9 @@ public class DogModel extends Observable {
     public void inferByExclusion(){
         int xPossible = 20;
         int xImpossible = 530;
-        int yPossible = 25;
-        int yImpossible = 25;
-        int ySpacing = 25;
+        int yPossible = 10;
+        int yImpossible = 10;
+        int ySpacing = 17;
         for(Dogbreed dogbreed : Dogbreed.values()){
             if(!questionAnswerPairs.get(Question.ONE).equals(Size.IDK.getString()) && !dogbreed.size().getString().equals(questionAnswerPairs.get(Question.ONE))){
                 impossible.add(new ResultVertex(xImpossible, yImpossible, dogbreed.getName(), false));

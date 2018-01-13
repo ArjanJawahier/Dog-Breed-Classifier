@@ -6,7 +6,7 @@ public class ResultVertex extends Vertex {
 
     private boolean possible;
 
-    private final static int RESULT_VERTEX_DEFAULT_HEIGHT = 25;
+    private final static int RESULT_VERTEX_DEFAULT_HEIGHT = 17;
 
     public ResultVertex(int x, int y, int width, int height, String name, Color backgroundColor, Boolean possible) {
         super(x, y, width, height, name, backgroundColor);

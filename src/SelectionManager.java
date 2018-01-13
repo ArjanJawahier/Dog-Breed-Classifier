@@ -27,7 +27,7 @@ public class SelectionManager extends MouseInputAdapter {
     public void mouseMoved(MouseEvent event){
         for(Vertex vertex : model.getAnswerVertices()) {
             if (cursorOnVertex(event, vertex)) {
-                panel.setShownImage("/src/images/" +  vertex.getName() + ".png");
+                panel.setShownImage("/images/" +  vertex.getName() + ".png");
                 break;
             }
             if(model.getAnswerVertices().size() != 0){
@@ -38,7 +38,7 @@ public class SelectionManager extends MouseInputAdapter {
         if(model.getInfoBlock() == null) {
             for (Vertex vertex : model.getPossible()) {
                 if (cursorOnVertex(event, vertex)) {
-                    panel.setShownImage("/src/images/" + vertex.getName() + ".png" );
+                    panel.setShownImage("/images/" + vertex.getName() + ".png" );
                     break;
                 }
                 if(event.getX() < 400){
@@ -48,7 +48,7 @@ public class SelectionManager extends MouseInputAdapter {
 
             for (Vertex vertex : model.getImpossible()) {
                 if (cursorOnVertex(event, vertex)) {
-                    panel.setShownImage("/src/images/" + vertex.getName() + ".png" );
+                    panel.setShownImage("/images/" + vertex.getName() + ".png" );
                     break;
                 }
                 if(event.getX() > 400){

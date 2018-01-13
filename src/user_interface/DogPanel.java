@@ -79,6 +79,8 @@ public class DogPanel extends JPanel implements Observer {
         if(shownImage != null){
             int x = 400 - shownImage.getWidth()/2;
             graphics.drawImage(shownImage, x, 630, shownImage.getWidth(), shownImage.getHeight(), null);
+            graphics.setColor(Color.BLACK);
+            graphics.drawRect(x, 630, shownImage.getWidth(), shownImage.getHeight());
         }
     }
 
@@ -178,7 +180,12 @@ public class DogPanel extends JPanel implements Observer {
             buffImg = ImageIO.read(DogPanel.class.getResource(fileLocation));
         }
         catch (Exception e) {
-            System.out.println("image not found: " + fileLocation);
+            try{
+                buffImg = ImageIO.read(DogPanel.class.getResource("/src" + fileLocation));
+            }
+            catch (Exception f){
+                System.out.println("Image fetching failed twice: Apparently there are no images with this URL: " + fileLocation);
+            }
         }
         this.shownImage = buffImg;
     }
