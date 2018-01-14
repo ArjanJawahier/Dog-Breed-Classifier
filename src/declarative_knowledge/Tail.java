@@ -11,9 +11,6 @@ public enum Tail {
     WHIP            ("Whip"),
     IDK             ("I don't know");
 
-    //Might need to add a type called "Over the back", (samoyeds, akita inu,SHIBA)
-    //currently simplified as RING tails
-
     private final String string;
 
     Tail(String string){
